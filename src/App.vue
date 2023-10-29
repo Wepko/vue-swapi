@@ -13,7 +13,6 @@
             <i-logo />
           </span>
         </a-menu-item>
-        <a-menu-item key="2"> <router-link :to="`/`">Назад</router-link></a-menu-item>
       </a-menu>
     </a-layout-header>
     <a-layout-content style="padding: 0 50px">
