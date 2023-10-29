@@ -5,7 +5,7 @@
         v-model:selectedKeys="selectedKeys"
         theme="dark"
         mode="horizontal"
-        :style="{ lineHeight: '64px' }"
+        :style="{ height: '100%' }"
       >
         <a-menu-item key="1">
           <router-link :to="`/`"></router-link>
