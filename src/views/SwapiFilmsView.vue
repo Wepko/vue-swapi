@@ -8,7 +8,7 @@ import { reactive, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import { type IFilmData, ResourcesTypeFilm } from '@/types';
-import { TableColumnsType } from 'ant-design-vue';
+import { type TableColumnsType } from 'ant-design-vue';
 
 interface ISwapiData {
   results: IFilmData[];
@@ -349,24 +349,3 @@ const dateForamte = (data: string) => moment(data).format('DD.MM.YYYY');
     </swapi-modal>
   </template>
 </template>
-
-<style>
-.full-modal .ant-modal {
-  max-width: 100%;
-  top: 0;
-  padding-bottom: 0;
-  margin: 0;
-}
-
-.full-modal .ant-modal-content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh);
-  overflow: hidden;
-}
-
-.full-modal .ant-modal-body {
-  flex: 1;
-  overflow-y: scroll;
-}
-</style>

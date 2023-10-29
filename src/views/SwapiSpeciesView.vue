@@ -8,7 +8,7 @@ import { reactive, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 
 import { type ISpecieData, ResourcesTypeSpecies } from '@/types';
-import { TableColumnsType } from 'ant-design-vue';
+import { type TableColumnsType } from 'ant-design-vue';
 
 interface ISwapiData {
   results: ISpecieData[];
@@ -108,7 +108,7 @@ const queryData = (params: { page?: number }) => {
   return swapiStore.querySawpiPagination('https://swapi.dev/api/species/', params);
 };
 
-const putDataInStore = (data: IPlanetData[]) => {
+const putDataInStore = (data: ISpecieData[]) => {
   (swapiSpecies.value as ISwapiData).results = data;
 };
 
@@ -256,24 +256,3 @@ const dateForamte = (data: string) => moment(data).format('DD.MM.YYYY');
     </swapi-modal>
   </template>
 </template>
-
-<style>
-.full-modal .ant-modal {
-  max-width: 100%;
-  top: 0;
-  padding-bottom: 0;
-  margin: 0;
-}
-
-.full-modal .ant-modal-content {
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh);
-  overflow: hidden;
-}
-
-.full-modal .ant-modal-body {
-  flex: 1;
-  overflow-y: scroll;
-}
-</style>
